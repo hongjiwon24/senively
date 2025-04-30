@@ -1,0 +1,175 @@
+/* 구글폰트 */
+body{
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  }
+
+
+/* 레이아웃 스타일링 */
+section{
+  height: 100vh;
+  min-height: 800px;
+}
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.flex-column{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  /*! gap: 5px; */
+}
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+nav div > a {
+  
+  color: #36342A;
+}
+nav div > span {
+  color: #C7C7C7;
+  
+}
+.block {
+  display: block;
+}
+
+
+/* 텍스트 스타일링 */
+.h1{
+  font-family: "Libre Bodoni", serif;
+  font-size: 54px;
+  font-weight: bold;
+}
+.h2{
+  font-size: 54px;
+}
+.h3{
+  font-size: 35px;
+}
+.h4{
+  font-size: 25px;
+  font-weight: bold;
+}
+.h5{
+  font-size: 20px;
+}
+.menu{
+  font-size: 18px;
+}
+.submenu{
+  font-size: 16px;
+}
+.titlep{
+  font-size: 20px;
+}
+.p{
+  font-size: 18px;
+}
+.m{
+  font-size: 16px;
+}
+.sm{
+  font-size: 14px;
+}
+.xs{
+  font-size: 12px;
+}
+.name-list {
+  font-size: 66px;
+  font-weight: bold;
+  color: #36342A;
+}
+
+
+/* 컬러 */
+.white, .white a{
+  color: #fff;
+}
+.gray{
+  color: #919294;
+}
+.black, .black a{
+  color: black !important;
+}
+.brown {
+  color: color: #271C1C;;
+}
+
+
+/* 버튼 */
+a.vmbtn {
+  font-family: "Libre Bodoni", serif;
+  font-size: 20px;
+}
+
+a.vmbtn:hover {
+/*   color: #9E3B3B; */
+  color: #ccc;
+  transition: 0.5s;
+}
+
+.vmbtn::after {
+  font-size: 18px;
+  color: #271C1C;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 8px;
+  background-image: url(../img/svg/arrow_r.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: 3px;
+  margin-left: 14px;
+  transition: 0.5s;
+  padding-right: 10px;
+}
+
+.vmbtn:hover::after {
+  transform: translateX(10px);
+  transition: 0.5s;
+  position: relative;
+}
+
+.timebtn {
+  background-color: #747160;
+  color: #AEAA96;
+  width: 80px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senively</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <!-- 구글 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    <!-- 1. jQuery -->
+    <script src="js/jquery-3.7.1.js"></script>
+
+    <!-- 2. Slick -->
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $('.modelslick').slick({
+                centerMode: true,
+                centerPadding: '0px',
+                infinite: true,    //slick은 무한루프(기본 옵션: infinite: true)를 위해 li를 자동으로 복제(clone) 함. infinite: false로 설정하면 clone이 사라짐 
+                slidesToShow: 5,    // 한 번에 보여줄 슬라이드(li) 개수
+                slidesToScroll: 1   // 한 번에 넘길 슬라이드 개수
+            });
+
+            const track = document.querySelector('.track');
+            const original = track.innerHTML;
+            let cloneCount = 0;
+
+            while (track.scrollWidth < window.innerWidth * 2) {
+            track.innerHTML += original;
+            cloneCount++;
+            if (cloneCount > 10) break; // 안전장치
+            }
+
+            // #magazine div.wrap div.flex a에 마우스 올릴 시(hover)
+
+            // $(#magazine div.wrap div.flex a).hover(function(){
+                
+            // });
+    
+           
+        });
+    </script>
+
+    <script> // 매거진 섹션
+        $(document).ready(function(){
+            $('#magazine .flex a').hover(
+                function () {
+                    // 마우스를 올렸을 때
+                    $(this).addClass('hovered');
+                    $('#magazine .flex a').not(this).addClass('not-hovered');
+                },
+                function () {
+                    // 마우스를 뗐을 때
+                    $('#magazine .flex a').removeClass('hovered not-hovered');
+                }
+                );
+        });
+    </script>
+
+    <!-- AOS (스크롤시 애니메이션 활성화)-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $().ready(function(){
+            AOS.init();
+        });
+        
+    </script>
+
+
+</head>
+<body>
+    <header>
+        <nav class="flex wrap">
+            <h1 class="h1 .tinos-regular">Senively</h1>
+            <div>
+                <a href="" class="block h6">장바구니</a>
+                <span class="block">｜</span>
+                <a href="" class="block h6">마이페이지</a>
+            </div>
+            <ul class="flex-column">
+                <li><a href="" class="block menu">BRAND</a></li>
+                <li><a href="" class="block menu">50+ MODELS</a></li>
+                <li><a href="" class="block menu">CASTING</a></li>
+                <li><a href="" class="block menu">COMMUNITY</a></li>
+                <li><a href="" class="block menu">STORE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="title">
+        <div class="flex wrap">
+                <h2 class="h3">We are <strong class="block">Senively</strong></h2>
+                <h3 class="h3">특별히 활기 넘치는 <strong class="block">뉴 시니어 모델</strong></h3>
+        </div>
+    </div>
+    <main>
+        <!-- <section id="models">
+            <div class="wrap flex-column-center">
+                <h2 class="h1 white">Models</h2>
+                <h3 class="h5 white">시니블리와 함께하는 50+ 모델</h3>
+                <a href="" class="block vmbtn">view more</a>
+                <div class="modelslick">
+                    <figure class="mlist mlist1">
+                        <img src="./img/model_01.jpg" alt="">
+                        <figcaption>김규숙</figcaption>
+                    </figure>
+                    <figure class="mlist mlist2">
+                        <img src="./img/model_06.jpg" alt="">
+                        <figcaption>한규선</figcaption>
+                    </figure>
+                    <figure class="mlist mlist3">
+                        <img src="./img/model_02.jpg" alt="">
+                        <figcaption>이미영</figcaption>
+                    </figure>
+                    <figure class="mlist mlist4">
+                        <img src="./img/model_03.jpg" alt="">
+                        <figcaption>정미경</figcaption>
+                    </figure>
+                    <figure class="mlist mlist5">
+                        <img src="./img/model_05.png" alt="">
+                        <figcaption>차성우</figcaption>
+                    </figure>
+                    <figure class="mlist mlist5">
+                        <img src="./img/model_08.jpg" alt="">
+                        <figcaption>노현정</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section> -->
+        <section id="models">
+            <div class="wrap flex-column-center">
+                <h2 class="h1 white">Models</h2>
+                <h3 class="h5 white">시니블리와 함께하는 50+ 모델</h3>
+                <a href="" class="block vmbtn">view more</a>
+                <div class="modelslick">
+                    <div>
+                        <span class="block">김규숙</span>
+                        <p>김규숙</p>
+                    </div>
+                    <div>
+                        <span class="block">한규선</span>
+                        <p>한규선</p>
+                    </div>
+                    <div>
+                        <span class="block">이미영</span>
+                        <p>이미영</p>
+                    </div>
+                    <div>
+                        <span class="block">정미경</span>
+                        <p>정미경</p>
+                    </div>
+                    <div>
+                        <span class="block">차성우</span>
+                        <p>차성우</p>
+                    </div>
+                    <div>
+                        <span class="block">노현정</span>
+                        <p>노현정</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="modelname">
+            <div class="wrap">
+                <div class="marquee name-list">
+                    <div class="track">
+                        <span>김미영</span>
+                        <span>김규숙</span>
+                        <span>정미경</span>
+                        <span>이덕자</span>
+                        <span>차준주</span>
+                        <span>노현정</span>
+                        <span>차성수</span>
+                        <span>진진연</span>
+                        <span>전종배</span>
+                        <span>양해지</span>
+                        <span>이한별</span>
+                        <!-- 복제본 -->
+                        <span>김미영</span>
+                        <span>김규숙</span>
+                        <span>정미경</span>
+                        <span>이덕자</span>
+                        <span>차준주</span>
+                        <span>노현정</span>
+                        <span>차성수</span>
+                        <span>진진연</span>
+                        <span>전종배</span>
+                        <span>양해지</span>
+                        <span>이한별</span>
+                        <!-- 복제본 -->
+                        <span>김미영</span>
+                        <span>김규숙</span>
+                        <span>정미경</span>
+                        <span>이덕자</span>
+                        <span>차준주</span>
+                        <span>노현정</span>
+                        <span>차성수</span>
+                        <span>진진연</span>
+                        <span>전종배</span>
+                        <span>양해지</span>
+                        <span>이한별</span>
+                      </div>
+                    </div>
+                
+                    <div class="marquee name-list reverse">
+                      <div class="track">
+                        <span>송정민</span>
+                        <span>한규선</span>
+                        <span>김남연</span>
+                        <span>이지아</span>
+                        <span>김민정</span>
+                        <span>천용주</span>
+                        <span>권현옥</span>
+                        <span>김재환</span>
+                        <span>박설운</span>
+                        <span>황종성</span>
+                        <span>이주영</span>
+                        <!-- 복제본 -->
+                        <span>송정민</span>
+                        <span>한규선</span>
+                        <span>김남연</span>
+                        <span>이지아</span>
+                        <span>김민정</span>
+                        <span>천용주</span>
+                        <span>권현옥</span>
+                        <span>김재환</span>
+                        <span>박설운</span>
+                        <span>황종성</span>
+                        <span>이주영</span>
+                        <!-- 복제본 -->
+                        <span>송정민</span>
+                        <span>한규선</span>
+                        <span>김남연</span>
+                        <span>이지아</span>
+                        <span>김민정</span>
+                        <span>천용주</span>
+                        <span>권현옥</span>
+                        <span>김재환</span>
+                        <span>박설운</span>
+                        <span>황종성</span>
+                        <span>이주영</span>
+                      </div>
+                    </div>
+            </div>
+        </section>
+        <section id="slogan">
+            <div class="wrap">
+                <div class="flex-column-center">
+                    <h2 data-aos="fade-up" data-aos-offset="200" class="h2">“경험이 주는 <span>독보적</span>인 매력, 시니어 모델”</h2>
+                    <h2 data-aos="fade-up" data-aos-offset="300" class="h2">“나이가 아닌, <span>자신감</span>을 모델로”</h2>
+                    <h2 data-aos="fade-up" data-aos-offset="340" class="h2">“시간이 지나도, <span>여전히</span> 빛나는 아름다움”</h2>
+                </div>
+            </div>
+        </section>
+        <section id="magazine">
+            <div class="wrap flex-column-center">
+                <h2 class="h1">Magazine</h2>
+                <a href="" class="block vmbtn">view more</a>
+                <div class="flex">
+                    <a href=""><h3 class="h1">01</h3></a>
+                    <a href=""><h3 class="h1">02</h3></a>
+                    <a href=""><h3 class="h1">03</h3></a>
+                    <a href=""><h3 class="h1">04</h3></a>
+                </div>
+            </div>
+        </section>
+        <section id="casting">
+            <div class="wrap flex-column-center">
+                <h2 class="h1">Casting</h2>
+                <a href="" class="block vmbtn">view more</a>
+                <div class="flex">
+                    <a href="">
+                        <h3 class="h5">[웹드라마]</h3>
+                        <p class="h4">갱년기 개선 영양제
+                            <br>웹드라마 남편 역할 모집</p>
+                        <p class="h6">40대 남성</p>
+                        <time class="timebtn" datetime="">D-11</time>
+                    </a>
+                    <a href="">
+                        <h3 class="h5">[홍보영상]</h3>
+                        <p class="h4">돌봄로봇 홍보영상
+                            <br>여성 모델 모집</p>
+                        <p class="h6">70대 여성</p>
+                        <time class="timebtn" datetime="">D-20</time>
+                    </a>
+                    <a href="">
+                        <h3 class="h5">[바이럴 광고영상]</h3>
+                        <p class="h4">리액션이 자연스러운
+                            <br>여성 모델 모집</p>
+                        <p class="h6">70대 여성</p>
+                        <time class="timebtn" datetime="">D-30</time>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="store">
+            <div class="wrap flex-column-center">
+                <h2 class="h1">Store</h2>
+                <ul class="flex-column">
+                    <li>
+                        <img src="./img/Magazine_01.png" alt="">
+                        <h3 class="h4">매력UP! 자신감UP! 메이크오버 & 프로필 촬영</h3>
+                        <p class="h6">퍼스널컬러, 골격 진단, 이미지 메이킹 등을 통해 나만의 스타일을 세련되게 구축합니다.
+                            <br>자신만의 매력을 더욱 돋보이게 만들어, 모든 순간을 자신감 있게 이끌어갈 수 있습니다.</p>
+                        <a href="" class="block vmbtn">view more</a>
+                    </li>
+                    <li>
+                        <img src="./img/store_02.jpg" alt="">
+                        <h3 class="h4">오드퍼퓸급 우아한 패브릭 퍼퓸</h3>
+                        <p class="h6">고급스러우면서도 친근한 탈취 효과가 있는 편백수가 함유된 향수. 
+                            <br>섬유와 공간에 사용 가능한 시니블리 패브릭 퍼퓸으로 향테리어를 완성하세요.</p>
+                        <a href="" class="block vmbtn">view more</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </section>
+        <!-- <section id="FAQ">
+            <div class="wrap flex">
+                <div class="flex-column">
+                    <h2 class="h3">문의사항</h2>
+                    <p class="h6">시니블리에 궁금한 사항이 있으면 언제든지 문의 주세요.
+                        <br>담당자가 빠르게 답변 드리겠습니다.</p>
+                </div>
+                <div class="flex-column">
+                    <a href="" class="block h5">FAQ</a>
+                    <a href="" class="block h5">1대1 문의</a>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <div class="wrap flex">
+            <a href=""><h1 class="h1">Senively</h1></a>
+            <ul class="flex">
+                <li><p><strong>회사명</strong> 주식회사 베럴핏</p></li>
+                <li><p><strong>대표자</strong> 김희연</p></li>
+                <li><address><strong>주소</strong> 47291 부산 부산진구 서전로 8 위워크</address></li>
+                <li><p><strong>연락처</strong> 070-8065-2980</p></li>
+            </ul>
+            <div class="fbtn flex">
+                <a href="">개인정보처리방침</a><a href="">이용약관</a>
+            </div>
+            <div class="sns flex">
+                <a href="">유튜브</a><a href="">인스타그램</a><a href="">페이스북</a><a href="">카카오톡</a>
+            </div>
+            <p class="h6">COPYRIGHT ©senively. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <aside>
+        <div>
+        <a href="">
+            <h2>TOP</h2>
+        </a>
+        </div>
+        <div>
+            <a href="" class="block">
+                <h2>문의하기</h2>
+            </a>
+        </div>
+    </aside>
+    
+</body>
+</html>

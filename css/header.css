@@ -1,0 +1,56 @@
+body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 100vh auto auto auto;
+}
+header {
+  grid-column: 1;
+  grid-row: 1;
+  /*! box-sizing: border-box; */
+  padding: 60px 60px 0 60px;
+}
+header nav {
+  display: flex !important;
+  flex-direction: column;
+}
+header nav h1 {
+  
+  color: #36342A;
+}
+header nav div {
+  display: flex;
+  gap: 14px;
+  padding: 60px 0 20px 10px;
+}
+header nav div h2 {
+  
+}
+header nav ul {
+  
+}
+header nav ul li {
+  /*! padding: 25px 0; */
+  border-bottom: 1px solid #ccc !important;
+  width: 320px;
+  display: flex;
+}
+header nav ul li a {
+  
+  padding-left: 10px;
+  font-family: "Libre Bodoni", serif;
+  color: #767158;
+  height: 74px;
+  width: 320px;
+  display: flex !important;
+  align-items: center;
+}
+header nav ul li:hover {
+  background-color: #E9E5D1;
+}
+header nav ul li:hover a {
+  color: #A19C86;
+}
+
+
+
+
