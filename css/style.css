@@ -118,7 +118,7 @@ a.vmbtn {
 
 a.vmbtn:hover {
 /*   color: #9E3B3B; */
-  color: #ccc;
+  color: #929292;
   transition: 0.5s;
 }
 
@@ -137,11 +137,17 @@ a.vmbtn:hover {
   transition: 0.5s;
   padding-right: 10px;
 }
-
 .vmbtn:hover::after {
   transform: translateX(10px);
   transition: 0.5s;
   position: relative;
+}
+
+.vmbtnw::after {
+  background-image: url(../img/svg/arrow_r_w.svg);
+}
+.vmbtnw:hover::after {
+  background-image: url(../img.svg/arrow_r_g.svg);
 }
 
 .timebtn {

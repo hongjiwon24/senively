@@ -24,33 +24,30 @@
     <script type="text/javascript" src="js/slick/slick.min.js"></script>
 
 
-    <script>
+    <script> // 모델 소개 섹션
         $(document).ready(function(){
+
             $('.modelslick').slick({
                 centerMode: true,
                 centerPadding: '0px',
                 infinite: true,    //slick은 무한루프(기본 옵션: infinite: true)를 위해 li를 자동으로 복제(clone) 함. infinite: false로 설정하면 clone이 사라짐 
                 slidesToShow: 5,    // 한 번에 보여줄 슬라이드(li) 개수
-                slidesToScroll: 1   // 한 번에 넘길 슬라이드 개수
+                slidesToScroll: 1,   // 한 번에 넘길 슬라이드 개수
+                lazyLoad: 'ondemand',
             });
 
-            const track = document.querySelector('.track');
-            const original = track.innerHTML;
-            let cloneCount = 0;
+            // const track = document.querySelector('.track');
+            // const original = track.innerHTML;
+            // let cloneCount = 0;
 
-            while (track.scrollWidth < window.innerWidth * 2) {
-            track.innerHTML += original;
-            cloneCount++;
-            if (cloneCount > 10) break; // 안전장치
-            }
+            // while (track.scrollWidth < window.innerWidth * 2) {
+            // track.innerHTML += original;
+            // cloneCount++;
+            // if (cloneCount > 10) break; // 안전장치
+            // }
+            
 
-            // #magazine div.wrap div.flex a에 마우스 올릴 시(hover)
 
-            // $(#magazine div.wrap div.flex a).hover(function(){
-                
-            // });
-    
-           
         });
     </script>
 
@@ -107,67 +104,34 @@
         </div>
     </div>
     <main>
-        <!-- <section id="models">
-            <div class="wrap flex-column-center">
-                <h2 class="h1 white">Models</h2>
-                <h3 class="h5 white">시니블리와 함께하는 50+ 모델</h3>
-                <a href="" class="block vmbtn">view more</a>
-                <div class="modelslick">
-                    <figure class="mlist mlist1">
-                        <img src="./img/model_01.jpg" alt="">
-                        <figcaption>김규숙</figcaption>
-                    </figure>
-                    <figure class="mlist mlist2">
-                        <img src="./img/model_06.jpg" alt="">
-                        <figcaption>한규선</figcaption>
-                    </figure>
-                    <figure class="mlist mlist3">
-                        <img src="./img/model_02.jpg" alt="">
-                        <figcaption>이미영</figcaption>
-                    </figure>
-                    <figure class="mlist mlist4">
-                        <img src="./img/model_03.jpg" alt="">
-                        <figcaption>정미경</figcaption>
-                    </figure>
-                    <figure class="mlist mlist5">
-                        <img src="./img/model_05.png" alt="">
-                        <figcaption>차성우</figcaption>
-                    </figure>
-                    <figure class="mlist mlist5">
-                        <img src="./img/model_08.jpg" alt="">
-                        <figcaption>노현정</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section> -->
         <section id="models">
             <div class="wrap flex-column-center">
                 <h2 class="h1 white">Models</h2>
                 <h3 class="h5 white">시니블리와 함께하는 50+ 모델</h3>
-                <a href="" class="block vmbtn">view more</a>
+                <a href="" class="block vmbtn vmbtnw">view more</a>
                 <div class="modelslick">
                     <div>
-                        <span class="block">김규숙</span>
+                        <img src="./img/model/model_01.jpg" alt="김규숙">
                         <p>김규숙</p>
                     </div>
                     <div>
-                        <span class="block">한규선</span>
+                        <img src="./img/model/model_02.jpg" alt="한규선">
                         <p>한규선</p>
                     </div>
                     <div>
-                        <span class="block">이미영</span>
+                        <img src="./img/model/model_03.jpg" alt="이미영">
                         <p>이미영</p>
                     </div>
                     <div>
-                        <span class="block">정미경</span>
+                        <img src="./img/model/model_04.jpg" alt="정미경">
                         <p>정미경</p>
                     </div>
                     <div>
-                        <span class="block">차성우</span>
+                        <img src="./img/model/model_05.png" alt="차성우">
                         <p>차성우</p>
                     </div>
                     <div>
-                        <span class="block">노현정</span>
+                        <img src="./img/model/model_06.jpg" alt="노현정">
                         <p>노현정</p>
                     </div>
                 </div>
@@ -361,6 +325,23 @@
         </div>
     </footer>
     <aside>
+        <!-- <form action="">
+            <h2>AI 상담원 연결</h2>
+            <div class="chatbot">
+                <span>상담원</span>
+                <p>안녕하세요. 문의를 남겨주세요.</p>
+            </div>
+            <div class="chat">
+                <textarea name="message" id="" placeholder="문의 내용을 입력해주세요."></textarea>
+                <button type="submit">전송</button>
+            </div>
+            <div class="question">
+                <p>모델을 캐스팅하고 싶어요</p>
+                <p>모델을 신청하고 싶어요</p>
+                <p>오디션 관련 문의</p>
+            </div>
+            
+        </form> -->
         <div>
         <a href="">
             <h2>TOP</h2>

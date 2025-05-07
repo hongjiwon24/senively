@@ -3,6 +3,9 @@ main {
   grid-row: 2;
 }
 
+
+
+
 /* Models */
 
 #models {
@@ -29,56 +32,89 @@ main {
 #models div.wrap a {
   align-self: end;
   transform: translateY(-57px);
+  color: white;
+}
+#models div.wrap a:hover {
+  color: #9a978b;
+}
+#models div.wrap a:hover::after {
+  background-image: url(../img/svg/arrow_r_g.svg);
 }
 
 /* 슬릭 슬라이드 센터 */
 #models div.wrap div.slick-center{
-  transform: scale(1.2);       /* 살짝 확대 */
+  transform: scale(1.4);       /* 살짝 확대 */
   transition: all 0.3s ease;
   background-color: #F0F0F0;
   position: relative;
-  top: -26px;
+  top: -41px;
+}
+#models div.wrap div.slick-center::after {
+  content: none; /* center 슬라이드에는 ::after를 적용하지 않음 */
 }
 #models .slick-center p {
   display: flex !important;
 }
 
 /* 슬릭 슬라이드 */
-#models div.wrap .slick-slide {
-  height: 250px;
+/* #models div.wrap .slick-slide {
+  height: 334px;
   background-color: #3D3B2F;
   display: flex;
   justify-content: center;
   margin: 0 30px;
   position: relative;
+  bottom: -26px;
+  scale: 0.8;
+} */
+/* #models div.wrap .slick-slide::after {
+ content: "";
+ width: 260px;
+ height: 269px;
+ background-color: rgba(0, 0, 0, 0.84);
+ position: absolute;
+ z-index: 2;
+ margin-top: 11px;
+} */
+#models div.wrap .slick-slide {
+  height: 274px;
+  background-color: #3D3B2F;
+  display: flex;
+  justify-content: center;
+  margin: 0px 20px;
+  position: relative;
+  /*! bottom: -26px; */
+  scale: 0.8;
 }
-/* 모델 사진 */
-#models div.wrap div.modelslick > div span {
-  font-size: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 185px;
-  height: 200px;
-  margin-top: 5px;
+#models div.wrap .slick-slide::after {
+ content: "";
+ width: 200px;
+ height: 217px;
+ background-color: rgba(0, 0, 0, 0.84);
+ position: absolute;
+ z-index: 2;
+ margin-top: 7px;
 }
 
-#models div.wrap div.modelslick > div span:nth-child(1) {
-  background-image: url(../img/model_01.jpg);
+/* 모델 사진 */
+#models div.wrap div.modelslick > div img {
+  width: 200px;
+  height: 217px;
+  margin-top: 7px;
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
 }
-#models div.wrap div.modelslick > div span:nth-child(2) {
-  background-image: url(../img/model_06.jpg);
-}
-#models div.wrap div.modelslick > div span:nth-child(3) {
-  background-image: url(../img/model_02.jpg);
-}
-#models div.wrap div.modelslick > div span:nth-child(4) {
-  background-image: url(../img/model_03.jpg);
-}
-#models div.wrap div.modelslick > div span:nth-child(5) {
-  background-image: url(../img/model_05.png);
-}
-#models div.wrap div.modelslick > div span:nth-child(6) {
-  background-image: url(../img/model_08.jpg);
+#models div.wrap .slick-slide div img::after {
+  content: '';
+  position: absolute;
+  top: 11px; /* 이미지와 margin-top 맞춤 */
+  left: 0;
+  width: 260px;
+  height: 269px;
+  background-color: rgba(0, 0, 0, 0.4); /* 검정 + 투명도 조절 */
+  pointer-events: none; /* 마우스 이벤트 막지 않도록 */
+  z-index: 0;
 }
 
 /* 모델 이름 */
